@@ -1,0 +1,35 @@
+<div class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-collapse w3-card w3-animate-left" style="width:250px;"
+  id="Side-Bar">
+  <a href="/admin" class="w3-bar-item w3-button w3-center"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+
+  <div class="w3-bar-item w3-button w3-center" onclick="myAccFunc1()">
+    <i class="far fa-clone"></i> Posts <i class="fas fa-angle-double-down"></i></div>
+  <div id="Components" class="w3-hide w3-white w3-card-4">
+    <a href="/admin-posts" class="w3-bar-item w3-button w3-center">All posts</a>
+    <a href="/admin-posts/my-posts" class="w3-bar-item w3-button w3-center">My Posts</a>
+    <a href="/admin-posts/create" class="w3-bar-item w3-button w3-center">Create Posts</a>
+  </div>
+
+  <a href="/admin-categories" class="w3-bar-item w3-button w3-center"><i class="fas fa-archive"></i> Categories</a>
+
+  <a href="/route-comments" class="w3-bar-item w3-button w3-center"><i class="fas fa-comments"></i> Comments</a>
+
+  <a href="#" class="w3-bar-item w3-button w3-center"><i class="fas fa-link"></i> Links</a>
+
+</div>
+
+<script>
+
+  function myAccFunc1() {
+    var x = document.getElementById("Components");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className += " w3-cyan";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-cyan", "");
+    }
+  }
+
+</script>

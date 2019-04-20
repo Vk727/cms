@@ -1,0 +1,65 @@
+@import url('https://fonts.google.com/specimen/Fjalla+One');
+
+* {
+    font-family: 'Fjalla One', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(235, 243, 239);
+
+} 
+
+
+.nav-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.nav-container a {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    color: #e74c3c;
+    text-transform: uppercase;
+    padding: 15px 0 15px 10px;
+    margin: 5px 0;
+    width: 200px;
+    letter-spacing: 1.5px;
+    box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
+    position: relative;
+    margin-left: -140px;
+    transition: 0.5s ease; 
+} 
+
+.nav-container a span {
+    float: right;
+    width: 60px;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background: #3498db;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nav-container a span i {
+    font-size: 33px;
+}
+
+.nav-container a:hover{
+    margin-left: 0;
+}
+
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .w3-sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }

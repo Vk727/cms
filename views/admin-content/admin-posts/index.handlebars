@@ -1,0 +1,46 @@
+<div class="alert alert-info">
+    <h5>Admin  /  All Posts</h5>
+</div>
+
+<h1>All Posts</h1>
+
+
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>File</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Category</th>
+            <th>Allow Comments</th>
+            <th>Date</th>
+            <th></th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {{#each posts}}
+
+        <tr>
+            <td>{{id}}</td>
+            <td><img height="50" class="img img-responsive" src="/uploads/{{file}}" alt="img"></td>
+            <td>{{title}}</td>
+            <td>{{status}}</td>
+            <td>{{category.name}}</td>
+            <td>{{allowComments}}</td>
+            <td>{{generateDate date 'MMMM Do YYYY'}}</td>
+            <td><a href="/post/{{slug}}" class="btn btn-success">View</a></td>
+  
+        </tr>
+
+        {{/each}}
+
+
+    </tbody>
+
+</table>

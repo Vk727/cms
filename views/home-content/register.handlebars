@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+<div class="col-lg-7 card card-register mx-auto mt-5">
+    <div class="card-header">Register an Account</div>
+    <div class="card-body">
+
+        <form action="/register" method="post">
+
+            <!-- Name -->
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="firstName">First Name</label>
+                        <input value="{{firstName}}" required name="firstName" class="form-control" id="firstName" type="text"
+                            placeholder="Enter first name...">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName">Last Name</label>
+                        <input value="{{lastName}}" required name="lastName" class="form-control" id="lastName" type="text"
+                            placeholder="Enter last name...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input value="{{email}}" required name="email" class="form-control" id="email" type="text" placeholder="Enter email id...">
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="password">Password</label>
+                        <input required name="password" class="form-control" id="password" type="password"
+                            placeholder="Enter password...">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input required name="confirmPassword" class="form-control" id="confirmPassword" type="password"
+                            placeholder="Re-enter password...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            
+        </form>
+
+        <!-- Extra Links -->
+        <div class="text-center">
+            <a class="d-block small mt-3" href="#">Login Page</a>
+            <a class="d-block small" href="#">Forgot Password</a>
+            <a class="d-block small" href="#">Home Page</a>
+        </div>
+
+    </div>
+</div>
+
+</div>

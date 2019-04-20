@@ -1,0 +1,77 @@
+<!-- This is just a layout -->
+<!-- Content is generated dynamically from "home" folder in "views" directroy-->
+<!--i.e., it by default it looks for its content in views->home->index.handlebars -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Home page of CMS web app">
+    <meta name="keyword" content="Home,index">
+    <meta name="author" content="Vivek">
+    <meta http-equiv="refresh" content="300">
+
+    <title>CMS Web App</title>
+    <!-- Bootstrap core css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Space for custom styles for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <!-- checks to views/home-partials/home-nav.handlebars-->
+
+    <div id="Top-Nav-Bar">
+
+        {{>home-partials/home-nav}}
+
+    </div>
+
+
+    <!-- Page Content  fetched from views/home/index.handlebars-->
+
+    <div id="Body">
+
+        {{#if errors}}
+
+            {{#each errors}}
+
+            <div class="container alert alert-danger">
+                {{message}}
+            </div>
+
+            {{/each}}
+
+        {{/if}}
+
+        <div class="container text-center">
+            {{>home-partials/form-msgs}}
+        </div>
+
+        {{{body}}}
+
+    </div>
+
+    <!-- Page footer -->
+    <!-- checks to views/home-partials/footer.handlebars-->
+
+    <div id="Footer">
+
+        {{>home-partials/footer}}
+
+    </div>
+
+
+</body>
+
+</html>

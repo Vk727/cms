@@ -1,0 +1,8 @@
+Although handlebars provides builtin functions like 'if' but we shall define our own functions.
+These functions are kept in the helper folder.
+
+typical use->
+
+While accessing a post for edit, it can be observed that the status automatically to 'public' regardless of what is stored in db (which may be draft or private).
+
+To pull exact data, we define our functions in helpers folder.

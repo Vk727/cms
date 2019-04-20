@@ -1,0 +1,85 @@
+<!-- This is just a layout -->
+<!-- Content is generated dynamically from "admin" folder in "views" directroy-->
+<!--i.e., it by default it looks for its content in views->admin->index.handlebars -->
+
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Admin Page">
+    <meta name="keyword" content="admin, dashboard">
+    <meta name="author" content="Vivek">
+
+    <title>CMS Admin Dashboard</title>
+
+    <!-- Bootstrap core css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Space for custom styles for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    {{!-- for responsive topNav and sideNav --}}
+    <link rel="stylesheet" href="css/myStyle.css" type="text/css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Bootstrap switch -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.css">
+
+    <!-- Toastr notification -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <title>CMS Admin</title>
+
+</head>
+
+<body>
+
+    <div id="Top-Nav-Bar">
+
+        <!-- Navigation -->
+        <!-- checks to views/admin-partials/admin-nav.handlebars-->
+
+        {{>admin-partials/admin-topNav}}
+
+    </div>
+
+    <div class="row" id="Body">
+
+        <div class="col-sm-3 col-md-6 col-lg-4" id="Side-Nav-Bar">
+
+            {{>admin-partials/admin-sideNav}}
+
+        </div>
+
+        <div class="col-sm-9 col-md-6 col-lg-8" style="margin-left: 20%" id="Page-Content">
+
+            {{!-- page content fetched from views/admin-content/index.handlebars --}}
+
+            {{>home-partials/form-msgs}}
+
+            {{{body}}}
+
+        </div>
+
+    </div>
+
+    <div id="Footer">
+
+        {{>admin-partials/admin-footer}}
+        {{!-- checks to views/admin-partials/admin-footer.handlebars --}}
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+
+    {{!-- the top div for all content --}}
+    <div class="container">
+
+        {{!-- div for application name and logo --}}
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/admin">CMS Admin</a>
+
+        </div>
+        {{!-- div for application name ends --}}
+
+
+        {{!-- For all the routes of files checks the routes/home-routes/home-routes-file.js --}}
+
+
+        {{!-- toggler option which is initially false --}}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminNavbar"
+            aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation" aria-hidden="true">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        {{!-- div for home menus --}}
+        <div class="collapse navbar-collapse" id="adminNavbar">
+
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+
+                </li>
+
+                {{!-- admin option to be removed later --}}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Admin</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">contact</a>
+                </li>
+
+                <li>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fa fa-user">
+                            {{#if user}}
+                            {{user.firstName}}
+                            {{/if}}
+                        </i> <i class="fas fa-sign-out-alt"></i> </i>Logout</a>
+                </li>
+
+            </ul> 
+        </div>
+        {{!-- home menus end --}}
+    </div>
+    {{!-- all content div ends --}}
+
+  
+
+
+</nav>
+
+  <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Are you ready to leave ?</h5>
+                    <button class="close" type="button" data-dismiss="modal">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session</div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/logout">Logout</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
